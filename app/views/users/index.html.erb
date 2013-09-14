@@ -1,0 +1,31 @@
+<h1>User</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>License</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+     <td><%= user.name %></td>
+     <td><%= user.email %></td>
+     <td>
+        <% if user.license.nil? %>
+        No License
+        <% else %>
+        <%= user.license.number %>
+        <% end %>
+      </td>
+      <td>
+        <%= link_to "Show", person %>
+      </td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'New User', new_user_path %>

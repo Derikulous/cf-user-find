@@ -1,0 +1,17 @@
+<span><%= notice %></span>
+<p><%= @user.name %></p>
+<p><%= @user.email %></p>
+<p><%= @user.license %></p>
+
+<h1><%= notice%></h1>
+<p>
+  Name: <%= @user.phone %>
+</p>
+<p>
+  Email: <%= @user.email %>
+</p>
+<% if @license %>
+  <p>
+    License: <%= @license.number %>
+  </p>
+<% end %>
