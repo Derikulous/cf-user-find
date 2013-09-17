@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130913233945) do
+ActiveRecord::Schema.define(version: 20130916215354) do
 
   create_table "licenses", force: true do |t|
     t.string   "number"
     t.string   "state"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

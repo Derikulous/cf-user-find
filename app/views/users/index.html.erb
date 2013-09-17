@@ -13,19 +13,20 @@
     <tr>
      <td><%= user.name %></td>
      <td><%= user.email %></td>
+      <% if user.license.present? %>
+     <td><%= user.license.number %></td>
+     <td><%= user.license.state %></td>
      <td>
-        <% if user.license.nil? %>
+        <% if user.license.state.nil? %>
         No License
         <% else %>
-        <%= user.license.number %>
+        <%= user.license.user_id %>
         <% end %>
-      </td>
-      <td>
-        <%= link_to "Show", person %>
       </td>
       <% end %>
     </tr>
   </tbody>
 </table>
+<% end %>
 
 <%= link_to 'New User', new_user_path %>
