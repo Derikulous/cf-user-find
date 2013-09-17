@@ -9,4 +9,12 @@ class User < ActiveRecord::Base
     value = value.downcase.strip
     write_attribute :email, value
   end
+
+def self.search(search)
+  if search
+    find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+  else
+    find(:all)
+  end
+end
 end
