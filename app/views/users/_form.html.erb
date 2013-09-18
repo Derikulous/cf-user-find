@@ -28,19 +28,8 @@
     <%= license_form.text_field :number %>
   </div>
     <div>
-      <p><%= f.submit %></p>
+      <p><%= f.submit "Submit" %></p>
     </div>
   <% end %>
-
-  <div id="search">
-    <p>
-      <% form_tag users_path, :method => 'get' do %>
-      <p>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search", :email => nil %>
-      </p>
-      <% end %>
-    </p>
-  </div>
 </fieldform>
 <% end %>

@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20130916215354) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
+    t.datetime "last_searched_for_at"
+    t.integer  "search_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
